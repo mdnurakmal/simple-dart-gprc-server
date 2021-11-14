@@ -1,10 +1,12 @@
 FROM google/dart
 
 WORKDIR /app
-COPY . .
-RUN pub get 
+
+ADD pubspec.* /app/
+RUN pub get
+ADD . /app
+RUN pub get --offline
 
 ENV PORT 5000
-CMD []
 
 ENTRYPOINT ["/usr/bin/dart", "bin/server.dart"]
