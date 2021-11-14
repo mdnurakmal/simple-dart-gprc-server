@@ -4,8 +4,8 @@ import 'package:grpcTest/grpc_demo.dart';
 
 void main() async {
   final channel = ClientChannel(
-    "test-rffbfesyba-km.a.run.app",
-    port: 443,
+    "35.222.15.151",
+    port: 5000,
     options: const ChannelOptions(
       credentials: ChannelCredentials.insecure(),
     ),
